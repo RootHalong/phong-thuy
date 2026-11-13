@@ -65,10 +65,10 @@ Sau mốc này các repo gốc có thể đã thay đổi — cần kiểm tra l
 - Trang chủ: http://doanguyen.pythonanywhere.com
 - Mô tả của tác giả: “Phần mềm an sao tử vi mã nguồn mở”.
 - Ngôn ngữ chính: **Python**. Nhánh mặc định: `master`.
-  Tạo ngày 09/09/2016 — nguồn lâu đời nhất trong 3 nguồn.
+  Tạo ngày 09/09/2016 — nguồn lâu đời nhất trong 4 nguồn.
   Lần đẩy gần nhất 13/04/2026; trang repo cập nhật lần cuối 06/11/2026.
-- Quy mô: 5.858 KB, **25 mục** trong cây thư mục — gọn nhất trong 3 nguồn.
-- Sao / fork: **50 sao, 70 fork** — được dùng lại nhiều nhất trong 3 nguồn.
+- Quy mô: 5.858 KB, **25 mục** trong cây thư mục — gọn nhất trong 4 nguồn.
+- Sao / fork: **50 sao, 70 fork** — được dùng lại nhiều nhất trong 4 nguồn.
 - Giấy phép: **MIT License**.
 - Nội dung: chỉ chứa **API an sao Tử Vi**, chưa có frontend trong repo này.
   Frontend riêng xem tại [lasotuvi-django](https://github.com/doanguyen/lasotuvi-django)
@@ -80,3 +80,53 @@ Sau mốc này các repo gốc có thể đã thay đổi — cần kiểm tra l
   - `docs/lich.md` — ghi chú về lịch; `tests/` — 3 file test.
 - Đây là nguồn gốc phù hợp nhất nếu chỉ cần **thuật toán an sao cốt lõi**,
   gọn nhẹ, giấy phép thoáng (MIT).
+
+## 4. fengshui.skill — voidforall/fengshui.skill (bổ sung 13/11/2026)
+
+- Link: https://github.com/voidforall/fengshui.skill
+- Tên trong repo: **堪舆子 · 传统风水顾问** (Kham Dư Tử — Cố vấn phong thủy truyền thống).
+- Mô tả của tác giả: Skill phong thủy truyền thống theo chuẩn mở Agent Skills,
+  chuyên về “Tam Nguyên Huyền Không Phi Tinh, Bát Trạch Minh Kính, Trạch Nhật học”.
+- Dạng: **Skill cho AI agent** (file `SKILL.md`, phiên bản 2.2.0, tác giả voidforall),
+  không phải ứng dụng web hay thư viện thuần túy. Cài bằng
+  `npx skills add voidforall/fengshui.skill`, dùng được trong Claude Code,
+  Codex CLI và hơn 30 agent hỗ trợ chuẩn Agent Skills.
+- Ngôn ngữ: tài liệu **tiếng Trung**; script tính toán bằng **Python**.
+  Nhánh mặc định: `main`. Tạo ngày 11/04/2026; 29 commit; commit hiện tại
+  `3d9d3493d56ab0324997b6dd3e9f4cc4a4c81734` (theo trang repo ngày 13/11/2026).
+- Quy mô và mức quan tâm: **417 sao, 57 fork**, 2 release, 2 tag — được quan tâm
+  nhiều nhất trong 4 nguồn của dự án.
+- Giấy phép: **không thấy file giấy phép** trong danh sách file gốc trên trang repo;
+  truy cập `LICENSE` trên nhánh `main` trả 404 ngày 13/11/2026. Coi như
+  **chưa công bố giấy phép** — dự án này chỉ trỏ tới bằng submodule/liên kết,
+  không sao chép mã, cho đến khi tác giả công bố giấy phép.
+- Nội dung chính theo README của repo:
+  - **Huyền Không Phi Tinh Tam Nguyên:** xếp bàn phi tinh theo hướng nhà và thời
+    gian nhập trạch, xét vận bàn/sơn tinh/hướng tinh,格局 (vượng sơn vượng hướng,
+    thượng sơn hạ thủy, song tinh…), kiêm hướng/không vong, thế quái.
+  - **Bát Trạch Minh Kính:** mệnh quái, du niên, 4 cát 4 hung phương, bố cục
+    phòng ngủ/thư phòng/tài vị; phối hợp mệnh trạch.
+  - **Hình Thế Loan Đầu:** long huyệt sa thủy hướng, tàng phong tụ khí, ngoại sát
+    (lộ xung, thiên trảm, bích đao…) và cách hóa giải.
+  - **Trạch Nhật:** kiến trừ thập nhị thần, nguyệt phá, tam sát, nghi/kỵ, chọn
+    ngày nhập trạch/khai trương/động thổ.
+  - **Bát Tự phối phong thủy:** tứ trụ, thập thần, dụng thần gợi ý phương vị
+    và màu sắc hợp mệnh.
+  - Nguyên tắc của Skill: **“tính toán giao cho mã, luận giải giao cho mô hình”**
+    — mọi xếp bàn, tra bảng, lịch pháp đều do script `scripts/fengshui.py`
+    (gói `scripts/kanyu/`: `core`, `bazhai`, `feixing`, `zibai`, `almanac`,
+    `zeri`, `bazi`, `render`, `pages`, `cli`) tính xác định, có test hồi quy
+    và snapshot trong `tests/golden/`; mô hình chỉ hỏi thông tin và diễn giải.
+  - Mỗi quy tắc/trích dẫn đều ghi rõ **nguồn và trạng thái đối chiếu** trong
+    `references/sources.md` (đã đối chiếu nguyên văn / đã tính toán kiểm chứng /
+    xuất xứ công nhận / khẩu kính lưu phái / đã loại bỏ) — Skill yêu cầu chỉ
+    nói theo đúng trạng thái đó, không mạo nhận trích dẫn.
+  - Có sẵn bàn phi tinh tương tác (1 file HTML, mở offline, xem được trên điện
+    thoại); các bàn khác (la bàn định hướng, đối chiếu mặt bằng, lịch trạch nhật…)
+    đang trong kế hoạch.
+- Kinh điển tham khảo theo tác giả: 《宅经》, 《葬书》, 《天玉经》《青囊序》,
+  《地理五诀》, 《玄空秘旨》, 《沈氏玄空学》, 《协纪辨方书》.
+- Lưu ý của tác giả: v1.0.0 có nhiều lỗi ở Bát Trạch, mệnh quái và phi tinh,
+  đã sửa trong v2.0.0 — nên dùng v2 trở lên (hiện tại v2.2.0).
+- Đây là nguồn **chuyên sâu nhất về Phong Thủy** trong dự án, và là nguồn duy nhất
+  viết dưới dạng Skill cho AI agent.

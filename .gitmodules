@@ -7,3 +7,6 @@
 [submodule "nguon/lasotuvi"]
 	path = nguon/lasotuvi
 	url = https://github.com/doanguyen/lasotuvi.git
+[submodule "nguon/fengshui.skill"]
+	path = nguon/fengshui.skill
+	url = https://github.com/voidforall/fengshui.skill.git

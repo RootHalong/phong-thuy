@@ -24,7 +24,11 @@ Theo README của `bat-tu-dung-than`, các yếu tố chọn ngày gồm:
 
 `TuViMCP` cũng có một phần xem ngày giờ tốt (Hoàng Đạo/Hắc Đạo, 12 Trực,
 28 Tú) trong module `_auspicious.py` — xem `docs/02-tu-vi-dau-so.md`.
-Hai nguồn dùng hệ tiêu chí khác nhau nên kết quả chọn ngày có thể không trùng nhau.
+`fengshui.skill` là nguồn trạch nhật đầy đủ nhất trong dự án: lệnh `zeri` chọn
+ngày theo sự việc (nhập trạch, khai trương, động thổ…) trong một khoảng ngày,
+loại cứng các ngày nguyệt phá, chính tứ phế, xung đương sự; lệnh `day` xem một
+ngày cụ thể (tứ trụ, kiến trừ, thần sát, nghi/kỵ). Các nguồn dùng hệ tiêu chí
+khác nhau nên kết quả chọn ngày có thể không trùng nhau.
 
 ## Lưu ý
 
