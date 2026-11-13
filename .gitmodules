@@ -1,0 +1,9 @@
+[submodule "nguon/bat-tu-dung-than"]
+	path = nguon/bat-tu-dung-than
+	url = https://github.com/godvstoaa/bat-tu-dung-than.git
+[submodule "nguon/TuViMCP"]
+	path = nguon/TuViMCP
+	url = https://github.com/nmhaaa3218/TuViMCP.git
+[submodule "nguon/lasotuvi"]
+	path = nguon/lasotuvi
+	url = https://github.com/doanguyen/lasotuvi.git
